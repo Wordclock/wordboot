@@ -1,3 +1,28 @@
+/*
+ * This file is part of wordboot.
+ *
+ * wordboot is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * wordboot is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with wordboot. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ * @file stk500.h
+ * @brief STK500 communication protocol commands
+ *
+ * This file contains all of the comands of the original STK500 communication
+ * protocol and was taken over from an Atmel application note (AVR061).
+ */
+
 //**** ATMEL AVR - A P P L I C A T I O N   N O T E  ************************
 //*
 //* Title:		AVR061 - STK500 Communication Protocol
