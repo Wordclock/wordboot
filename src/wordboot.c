@@ -160,12 +160,6 @@ void start_application() __attribute__ ((naked));
 int main(int argc, char* argv[])
 {
 
-    // Clear r1 as avr-gcc expects it to be zero
-    // This would be done by the initialization routines normally, but in our
-    // case we have to do it manually, as the Makefile makes sure the normal
-    // initialization routines are not added
-    __asm__ __volatile__ ("clr __zero_reg__");
-
     // Save MCU status register
     mcusr = MCUSR;
     MCUSR = 0;

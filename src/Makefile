@@ -2,10 +2,10 @@ PROGRAM     = wordboot
 GCCROOT     =
 OBJ         = $(PROGRAM).o
 OPTIMIZE    = -Os -fno-split-wide-types -mrelax
-LIBS        = -lc
+LIBS        =
 CC          = $(GCCROOT)avr-gcc
 CFLAGS      = -g -Wall $(OPTIMIZE) -mmcu=$(MCU_TARGET) -DF_CPU=$(AVR_FREQ)
-LDFLAGS     = $(LDSECTIONS) -Wl,--relax -nostartfiles -nostdlib
+LDFLAGS     = $(LDSECTIONS) -Wl,--relax
 OBJCOPY     = $(GCCROOT)avr-objcopy
 OBJDUMP     = $(GCCROOT)avr-objdump
 SIZE        = $(GCCROOT)avr-size
