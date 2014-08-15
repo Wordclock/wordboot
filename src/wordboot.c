@@ -105,7 +105,7 @@
  * @see BOOTLOADER_TIMEOUT_MS
  * @see get_ch()
  */
-#define BOOTLOADER_TIMEOUT_COMPARE_VALUE F_CPU / 256 / 256 * BOOTLOADER_TIMEOUT_MS / 1000
+#define BOOTLOADER_TIMEOUT_COMPARE_VALUE F_CPU / 1024 / 256 * BOOTLOADER_TIMEOUT_MS / 1000
 
 /**
  * @brief Content of the MCU status register
@@ -169,8 +169,8 @@ int main(int argc, char* argv[])
     wdt_disable();
 
     // Set up Timer0
-    // Prescaler: 256
-    TCCR0B = _BV(CS02);
+    // Prescaler: 1024
+    TCCR0B = _BV(CS02) | _BV(CS00);
 
     #if (LED_START_FLASHES > 0)
 
