@@ -1,0 +1,2 @@
+- Redefine Makefile to work out of the root directory and create binaries in
+  a /bin directory
