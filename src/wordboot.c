@@ -310,7 +310,7 @@ int main(int argc, char* argv[])
 
             uint8_t desttype;
             uint8_t *bufPtr;
-            uint16_t savelength;
+            uint8_t savelength;
             // Drop high byte of length
             drop_ch(1);
             length = get_ch();
