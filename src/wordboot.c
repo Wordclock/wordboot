@@ -457,6 +457,8 @@ uint8_t get_ch()
  * drops them. It is useful whenever bytes are expected as part of a command,
  * but don't actually need to be evaluated.
  *
+ * @param count Amount of characters that should be dropped
+ *
  * @see get_ch()
  */
 void drop_ch(uint8_t count)
@@ -608,6 +610,7 @@ void start_application()
  * <avr/boot.h> for the flash memory.
  *
  * @param memtype 'E' for EEPROM, 'F' (or anything else) for Flash
+ * @param buffer Buffer to read data from
  * @param address Address to start to write to
  * @param length Number of bytes to write
  *
